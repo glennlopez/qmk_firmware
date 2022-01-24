@@ -17,6 +17,29 @@
 
 #pragma once
 
+/* Select hand configuration */
+
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
+
+#define RGBLIGHT_SLEEP
+#define RGBLIGHT_LAYERS
+
+/* ws2812 RGB LED */
+#define RGB_DI_PIN D3
+
+#ifdef RGBLIGHT_ENABLE
+    #undef RGBLED_NUM
+    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+    #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_RAINBOW_SWIRL
+    #define RGBLED_NUM 5
+    #define RGBLIGHT_LIMIT_VAL 120
+    #define RGBLIGHT_HUE_STEP 10
+    #define RGBLIGHT_SAT_STEP 17
+    #define RGBLIGHT_VAL_STEP 17
+#endif
+
 #define OLED_TIMEOUT 120000
 #define OLED_BRIGHTNESS 120
 #define OLED_FONT_H "keyboards/lime/lib/glcdfont.c"

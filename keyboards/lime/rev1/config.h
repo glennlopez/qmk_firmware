@@ -56,6 +56,16 @@
 #define USB_POLLING_INTERVAL_MS 1
 #define LAYER_STATE_8BIT
 
+/* LED underglow */
+#define RGB_DI_PIN D3
+
+#ifdef RGBLIGHT_ENABLE
+#    define RGBLED_NUM 10 // Number of LEDs
+#    define RGBLED_SPLIT \
+        { 5, 5 }
+#    define RGBLIGHT_SPLIT
+#endif
+
 /* communication between sides */
 #define USE_SERIAL
 #define SOFT_SERIAL_PIN D2
